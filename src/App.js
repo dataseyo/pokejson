@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from "react"
+import Pokescroll from './components/pokescroll';
 
 function App() {
   // store JSON data
@@ -31,29 +32,36 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon JSON</h1>
-      <button 
-        onClick={changePokemon}
-        className="button"
-      >
-        Change Pokemon
-      </button>
 
-      {/* <pre>{JSON.stringify(shinySprite, null, 1)}</pre>
-      <pre>{JSON.stringify(normalSprite, null, 1)}</pre> */}
+      <Pokescroll data={pokeData} pokenumber={pokenumber}/>
 
-      <div className="poke-img-container">
-        <div className="shiny-img-container">
-          <p className="shiny-default-text">Shiny</p>
-          <img src={`${shinySprite}`} className="poke-img"></img>
-        </div>
+      <div className="pokemon-container ">
+        <h1>Pokemon JSON</h1>
+              <button 
+                onClick={changePokemon}
+                className="button"
+              >
+                Change Pokemon
+              </button>
 
-        <div className="normal-img-container">
-          <p className="shiny-default-text">Default</p>
-          <img src={`${normalSprite}`} className="poke-img"></img>
-        </div>
+              {/* <pre>{JSON.stringify(shinySprite, null, 1)}</pre>
+              <pre>{JSON.stringify(normalSprite, null, 1)}</pre> */}
+
+              <div className="poke-img-container">
+                <div className="shiny-img-container">
+                  <p className="shiny-default-text">Shiny</p>
+                  <img src={`${shinySprite}`} className="poke-img"></img>
+                </div>
+
+                <div className="normal-img-container">
+                  <p className="shiny-default-text">Default</p>
+                  <img src={`${normalSprite}`} className="poke-img"></img>
+                </div>
+              </div>
+            </div>
       </div>
-    </div>
+
+      
   );
 }
 

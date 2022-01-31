@@ -1,22 +1,25 @@
 .App {
   display: flex;
+  flex-direction: row;
+  background-color: rgb(236, 236, 229, .55);
+  max-width: 600px;
+  margin: 100px auto; 
+  border: 1px solid rgb(236, 236, 229);
+  border-radius: 5px;
+}
+
+.pokemon-container {
+  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: rgb(236, 236, 229);
-  max-width: 600px;
-  margin: 100px auto; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.scroll-container {
+  margin-right: 50px;
+  border: 2px solid black;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 .button {
   border-radius: 10px;
