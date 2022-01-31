@@ -2,8 +2,13 @@ import './App.css';
 import React, { useEffect, useState } from "react"
 
 function App() {
+  // store JSON data
   const [pokeData, setPokeData] = useState({});
+
+  // store position of pokemon in JSON data
   const [pokenumber, setPokenumber] = useState(2);
+
+  // store pokemon sprites from pokeData, default to Pokemon 1
   const [shinySprite, setShinySprite] = useState("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png")
   const [normalSprite, setNormalSprite] = useState("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
 
@@ -26,24 +31,26 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shiny Poke JSON</h1>
+      <h1>Pokemon JSON</h1>
       <button 
         onClick={changePokemon}
         className="button"
       >
         Change Pokemon
       </button>
-      <pre>{JSON.stringify(shinySprite, null, 1)}</pre>
+
+      {/* <pre>{JSON.stringify(shinySprite, null, 1)}</pre>
+      <pre>{JSON.stringify(normalSprite, null, 1)}</pre> */}
 
       <div className="poke-img-container">
-        <div className="shiny-img">
-          <p>Shiny</p>
-          <img src={`${shinySprite}`}></img>
+        <div className="shiny-img-container">
+          <p className="shiny-default-text">Shiny</p>
+          <img src={`${shinySprite}`} className="poke-img"></img>
         </div>
 
-        <div className="normal-img">
-          <p>Default</p>
-          <img src={`${normalSprite}`}></img>
+        <div className="normal-img-container">
+          <p className="shiny-default-text">Default</p>
+          <img src={`${normalSprite}`} className="poke-img"></img>
         </div>
       </div>
     </div>

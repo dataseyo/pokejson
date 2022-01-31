@@ -3,6 +3,9 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  background-color: rgb(236, 236, 229);
+  max-width: 600px;
+  margin: 100px auto; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,12 +29,23 @@
   flex-direction: row;
 }
 
-.shiny-img {
+.shiny-img-container {
   display: flex;  
   flex-direction: column;
 }
 
-.normal-img {
+.normal-img-container {
   display: flex;
   flex-direction: column;
+}
+
+.poke-img {
+  height: 200px;
+  width: 200px;
+}
+
+.shiny-default-text {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2px;
 }
