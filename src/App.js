@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from "react"
 import Pokescroll from './components/pokescroll';
+import Pokesearch from './components/pokesearch';
 
 function App() {
   // store JSON data
@@ -30,19 +31,43 @@ function App() {
     setNormalSprite(pokeData.sprites.front_default)
   };
 
+  const randomizePokemon = () => {
+    const randomInt = Math.floor(Math.random() * 897 +1)
+    setPokenumber(randomInt)
+    setShinySprite(pokeData.sprites.front_shiny)
+    setNormalSprite(pokeData.sprites.front_default)
+    console.log(randomInt)
+  }
+
   return (
     <div className="App">
 
-      <Pokescroll data={pokeData} pokenumber={pokenumber}/>
+      {/* <Pokescroll data={pokeData} pokenumber={pokenumber}/> */}
 
       <div className="pokemon-container ">
         <h1>Pokemon JSON</h1>
-              <button 
-                onClick={changePokemon}
-                className="button"
-              >
-                Change Pokemon
-              </button>
+              <div className="button-container">
+                <button 
+                  onClick={changePokemon}
+                  className="button"
+                >
+                  Next Pokemon
+                </button>
+
+                <button
+                  onClick={randomizePokemon}
+                  className="button"
+                >
+                  Randomize Pokemon
+                </button>
+              </div>
+
+              <Pokesearch 
+                pokeData={pokeData}
+                setPokenumber={setPokenumber}
+                setShinySprite={setShinySprite}
+                setNormalSprite={setNormalSprite}
+              />
 
               {/* <pre>{JSON.stringify(shinySprite, null, 1)}</pre>
               <pre>{JSON.stringify(normalSprite, null, 1)}</pre> */}
