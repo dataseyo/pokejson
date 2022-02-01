@@ -16,7 +16,7 @@ function App() {
   // update pokeData onrender, checking for pokenumber as a dependency
   // to change the fetch request
   useEffect(() => {
-    console.log("fetch");
+    // console.log("fetch");
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokenumber}`)
       .then((res) => res.json())
       .then((data) => setPokeData(data));
@@ -24,7 +24,7 @@ function App() {
 
   // function that increments pokenumber to change displayed poke 
   const changePokemon = () => {
-    console.log({ pokenumber });
+    // console.log({ pokenumber });
     setPokenumber((prevNumber) => prevNumber + 1);
     setShinySprite(pokeData.sprites.front_shiny)
     setNormalSprite(pokeData.sprites.front_default)
@@ -35,7 +35,7 @@ function App() {
     setPokenumber(randomInt)
     setShinySprite(pokeData.sprites.front_shiny)
     setNormalSprite(pokeData.sprites.front_default)
-    console.log(randomInt)
+    // console.log(randomInt)
   }
 
   return (
@@ -82,6 +82,7 @@ function App() {
                   <img src={`${normalSprite}`} className="poke-img"></img>
                 </div>
               </div>
+
             </div>
       </div>
 
