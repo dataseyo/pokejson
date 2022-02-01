@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokejson/static/css/main.a1e70042.css",
+    "main.js": "/pokejson/static/js/main.e77b94b8.js",
+    "static/js/787.35a64f83.chunk.js": "/pokejson/static/js/787.35a64f83.chunk.js",
+    "index.html": "/pokejson/index.html",
+    "main.a1e70042.css.map": "/pokejson/static/css/main.a1e70042.css.map",
+    "main.e77b94b8.js.map": "/pokejson/static/js/main.e77b94b8.js.map",
+    "787.35a64f83.chunk.js.map": "/pokejson/static/js/787.35a64f83.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1e70042.css",
+    "static/js/main.e77b94b8.js"
+  ]
+}
