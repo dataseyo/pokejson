@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useEffect, useState } from "react"
-import Pokescroll from './components/pokescroll';
 import Pokesearch from './components/pokesearch';
 
 function App() {

@@ -14,6 +14,9 @@ export default function Pokesearch(props) {
         event.preventDefault()
         setPokeLink(`https://pokeapi.co/api/v2/pokemon/${pokeSearch}`)
         console.log(pokeLink)
+
+        setPokeId()
+        console.log(pokeId)
         // props.setShinySprite(props.pokeData.sprites.front_shiny)
         // props.setNormalSprite(props.pokeData.sprites.front_default)
     }
